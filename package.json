@@ -1,0 +1,39 @@
+{
+	"name": "@rocketfuel-toolchain/build",
+	"version": "0.0.1",
+	"description": "Build RocketFuel Apps",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/olssonfredrik/rocketfuel-toolchain-build.git"
+	},
+	"author": "Fredrik Olsson",
+	"license": "MIT",
+	"private": true,
+	"dependencies": {
+		"bmfont2json": "^0.1.9",
+		"browserify": "^16.2.3",
+		"btoa": "^1.2.1",
+		"del": "^3.0.0",
+		"gulp": "^4.0.2",
+		"gulp-changed": "^3.2.0",
+		"gulp-debug": "^4.0.0",
+		"gulp-exec": "^3.0.2",
+		"gulp-file": "^0.4.0",
+		"gulp-filter": "^6.0.0",
+		"gulp-free-tex-packer": "^0.5.0",
+		"gulp-noop": "^1.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-rename": "^1.4.0",
+		"gulp-sourcemaps": "2.6.4",
+		"gulp-uglify-es": "^1.0.4",
+		"gulp-wait": "0.0.2",
+		"json-merger": "^1.1.0",
+		"plugin-error": "^1.0.1",
+		"through2": "^3.0.1",
+		"tsify": "^4.0.1",
+		"typescript": "^3.7.4",
+		"vinyl-buffer": "^1.0.1",
+		"vinyl-source-stream": "^2.0.0",
+		"writefile": "^0.2.8"
+	}
+}
