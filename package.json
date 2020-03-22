@@ -1,6 +1,6 @@
 {
 	"name": "@rocketfuel-toolchain/build",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Build RocketFuel Apps",
 	"repository": {
 		"type": "git",
