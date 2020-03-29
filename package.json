@@ -10,7 +10,7 @@
 	"license": "MIT",
 	"private": true,
 	"dependencies": {
-		"bmfont2json": "^0.1.9",
+		"bmfont2json": "0.1.9",
 		"browserify": "^16.2.3",
 		"btoa": "^1.2.1",
 		"del": "^3.0.0",
@@ -20,7 +20,7 @@
 		"gulp-exec": "^3.0.2",
 		"gulp-file": "^0.4.0",
 		"gulp-filter": "^6.0.0",
-		"gulp-free-tex-packer": "^0.5.0",
+		"gulp-free-tex-packer": "0.5.0",
 		"gulp-noop": "^1.0.0",
 		"gulp-plumber": "^1.2.1",
 		"gulp-rename": "^1.4.0",
