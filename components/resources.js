@@ -15,7 +15,7 @@ module.exports = function(gulp, options) {
 		
 		copy: (done) => {
 			done = util.log('Copy - Resources', done);
-			gulp.src( util.expandGlob( options.Locations, ['Resources/*.html', 'Resources/*.ico'] ) )
+			gulp.src( util.expandGlob( options.Locations, ['Resources/*.html', 'Resources/Files/**/*.*'] ) )
 				.pipe( plumber() )
 				.pipe( debug( { title: 'Copy - Resources: copy generic resource files to build:', showFiles: false } ) )
 				.pipe( gulp.dest( options.Target ) )
