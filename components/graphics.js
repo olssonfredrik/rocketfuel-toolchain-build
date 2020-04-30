@@ -36,8 +36,8 @@ module.exports = function(gulp, options) {
 
 	const packingOptions = {
 		textureName: "Texture",
-		width: 2048,
-		height: 2048,
+		width: 4096,
+		height: 4096,
 		fixedSize: false,
 		padding: 0,
 		extrude: 1,
