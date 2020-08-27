@@ -1,5 +1,6 @@
 const debug = require('gulp-debug');
 const plumber = require('gulp-plumber');
+const glslMinifier = require('../lib/glsl-minifier');
 const addMetaData = require('../lib/add-metadata');
 const addDownloadMetaData = require('../lib/add-download-metadata');
 const collectMetaData = require('../lib/collect-metadata');
@@ -39,6 +40,7 @@ module.exports = function(gulp, options) {
 			done = util.log('Copy - Shaders', done);
 			gulp.src( glob )
 				.pipe( debug( { title: 'Copy - Shaders: copy files to build:', showFiles: false } ) )
+				.pipe( util.ifRelease( glslMinifier )() )
 				.pipe( combineMultiFile( 'Shaders.multi', { IdPrefix: 'Shaders/' } ) )
 				.pipe( addDownloadMetaData( { UrlPrefix: 'Shaders/' } ) )
 				.pipe( collectMetaData( options.DownloadData ) )
