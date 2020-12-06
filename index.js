@@ -27,9 +27,6 @@ module.exports = function(resourceLocations, entryPoint, isDebug) {
 						Format: "integer"
 					}
 				}
-			},
-			TextManager: {
-				Data: {}
 			}
 		},
 		Locations: resourceLocations || ['./']
@@ -39,12 +36,12 @@ module.exports = function(resourceLocations, entryPoint, isDebug) {
 	const compile = [];
 	const copy = [];
 
-	const componentList = ['sound', 'spine', 'shaders', 'fonts', 'graphics', 'resources', 'config', 'download', 'code'];
+	const componentList = ['sound', 'spine', 'shaders', 'fonts', 'graphics', 'resources', 'config', 'text', 'download', 'code'];
 	componentList.forEach( function(value) {
 		var component = require( './components/' + value )(gulp, options);
-			preCompile.push(component.preCompile);
-			compile.push(component.compile);
-			copy.push(component.copy);
+		preCompile.push(component.preCompile);
+		compile.push(component.compile);
+		copy.push(component.copy);
 	} );
 
 	const cleanTask = (done) => {
@@ -53,8 +50,12 @@ module.exports = function(resourceLocations, entryPoint, isDebug) {
 	};
 	const buildTask = gulp.series( gulp.series(preCompile), gulp.series(compile), gulp.series(copy) );
 
+	const textComponent = require( './components/text' )(gulp, options);
+	const buildText = gulp.series( [ textComponent.preCompile, textComponent.compile, textComponent.copy ] );
+
 	return {
 		clean: cleanTask,
-		build: buildTask
+		build: buildTask,
+		text: buildText
 	};
 }
